@@ -1,0 +1,16 @@
+/* ********* */
+/* @HEADER */
+/* ********* */
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 1rem;
+    margin: 0rem 1rem 2rem 1rem;
+
+    img{
+        height: 50px;
+    }
+}

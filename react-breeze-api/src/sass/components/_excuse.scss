@@ -1,0 +1,37 @@
+
+.bubble {
+	min-height: 40px;
+    margin: 0rem 2rem 0rem 2rem;
+    padding: 1rem;
+	min-width: 200px;
+	background: ivory;
+	border-radius: 20px;
+	font-size: 16px;
+
+    box-shadow: 0px 5px 14px rgb(95, 122, 111);
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pointer {
+	height: 50px;
+	width: 50px;
+	background: ivory;
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 10px 0;
+	margin-top: -30px;
+	position: relative;
+	left: calc(0.5vw - -80px);
+
+    box-shadow: 0px 5px 14px rgb(95, 122, 111);
+
+    position: relative;
+    z-index: 0;
+}
+
