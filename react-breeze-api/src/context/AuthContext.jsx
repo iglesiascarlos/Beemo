@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
         await csrf();
         try {
             await axios.post('/login', data);
-            getUser();
+            await getUser();
             navigate('/')
         } catch (e) {
             if (e.response.status === 422) {
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
         await csrf();
         try {
             await axios.post('/register', data);
-            getUser();
+            await getUser();
             navigate('/')
         } catch (e) {
             if (e.response.status === 422) {
@@ -42,7 +42,13 @@ export const AuthProvider = ({ children }) => {
         }
     }
 
-    return <AuthContext.Provider value={{ user, errors, getUser, login, register }} >
+    const logout = () => {
+        axios.post('/logout').then (() => {
+            setUser(null);
+        })
+    }
+
+    return <AuthContext.Provider value={{ user, errors, getUser, login, register, logout }} >
         {children}
     </AuthContext.Provider>
 }
