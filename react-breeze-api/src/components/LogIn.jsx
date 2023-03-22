@@ -7,11 +7,11 @@ import useAuthContext from '../context/AuthContext';
 export default function LogIn () {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login, errors } = useAuthContext();
+  const { login, errors} = useAuthContext();
 
   const handleLogin = async (event) => {
-    event.preventDefault();
-    login({ email, password });
+      event.preventDefault();
+      login({ email, password });
   }
 
   return (
@@ -37,13 +37,13 @@ export default function LogIn () {
                           className="input email" 
                           type="text" 
                         />
-                        {/* {errors.email && (
+                        {errors.email && (
                           <div>
                             <span className="error">
                               {errors.email[0]}
                             </span>
                           </div>
-                        )} */}
+                        )}
                         <input 
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
@@ -51,13 +51,13 @@ export default function LogIn () {
                           className='input password' 
                           type="password" 
                         />
-                        {/* {errors.password && (
+                        {errors.password && (
                           <div>
                             <span className="error">
                               {errors.password[0]}
                             </span>
                           </div>
-                        )} */}
+                        )}
                         <button className='button-30 button-form' >Login</button>
                       </form>
                       

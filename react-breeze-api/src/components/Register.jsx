@@ -1,4 +1,5 @@
 import cruz from '../assets/cruz.svg'
+
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import useAuthContext from '../context/AuthContext';
@@ -10,10 +11,9 @@ export default function Register () {
   const [password_confirmation, setPasswordConfirmation] = useState("");
   const { register, errors } = useAuthContext();
 
-
   const handleRegister = async (event) => {
-    event.preventDefault();
-    register({ name, email, password, password_confirmation });
+      event.preventDefault();
+      register({ name, email, password, password_confirmation });
   }
 
   return (
@@ -38,13 +38,13 @@ export default function Register () {
                 className='input name' 
                 type="text"  
               />
-              {/* {errors.name && (
+              {errors.name && (
                 <div>
                   <span className="error">
                     {errors.name[0]}
                   </span>
                 </div>
-              )} */}
+              )}
               <input 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -52,13 +52,13 @@ export default function Register () {
                 className='input email' 
                 type="text" 
               />
-              {/* {errors.email && (
+              {errors.email && (
                 <div>
                   <span className="error">
                     {errors.email[0]}
                   </span>
                 </div>
-              )} */}
+              )}
               <input 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -66,13 +66,13 @@ export default function Register () {
                 className='input password' 
                 type="password" 
               />
-              {/* {errors.password && (
+              {errors.password && (
                 <div>
                   <span className="error">
                     {errors.password[0]}
                   </span>
                 </div>
-              )} */}
+              )}
               <input 
                 value={password_confirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
