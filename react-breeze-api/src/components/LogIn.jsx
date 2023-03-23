@@ -64,7 +64,7 @@ export default function LogIn () {
                       <Link to='/register'>
                           <button className='button-30 button-form' >Register</button>
                       </Link>
-                      <Link to='/password'>
+                      <Link to='/forgot-password'>
                           <button className='button-30 button-form' >New Password</button>
                       </Link>
                   </div>
