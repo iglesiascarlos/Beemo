@@ -26,4 +26,4 @@ Envia el correo electrónico al clicar en he olvidado la contraseña, asifacilit
   - 6 en la carpeta de test-api ejecutamos el siguiente comando 'php artisan breeze:install api'
   - 7 vamos a php my admin y creamos una tabla con el nombre 'test-api'
   - 8 abrimos la carpeta test-api en VScode, una vez dentro abrimos el archivo .env y en la parte de DB_PORT= x, deberas poner el puesrto donde tienes phpmyadmin, facil de mirar en xamp
-  - 9 una vez tenemos esto ejecutamos el comando 'php artisan migrate' y ya funcionará el sistema de login/register/logout/cambiar contraseña
+  - 9 una vez tenemos esto ejecutamos el comando 'php artisan migrate' y ya funcionará el sistema de login/register/logout/cambiar contraseña, ejecutar comando 'php artisan serve' para iniciar el php
